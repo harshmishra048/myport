@@ -1,0 +1,29 @@
+Harsh Mishra
+Full Stack Developer | Machine Learning Enthusiast
+
+Email: mishraharsh4353@gmail.com
+Phone: +91 8109350879
+LinkedIn: https://linkedin.com/in/mishraharsh4353
+GitHub: https://github.com/harshmishra048
+
+Profile
+Results-driven Computer Science Engineering student with hands-on experience in full-stack web development, machine learning, and UI/UX design. Skilled in building scalable web applications, AI-based solutions, and user-centric digital platforms that solve real-world problems.
+
+Education
+B.Tech in Computer Science Engineering
+AKS University, Satna
+2023 - 2027
+CGPA: 8.3
+
+Selected Projects
+- UTSAVAM: Event and wedding management platform.
+- SURI: Sign language communication platform for inclusive accessibility.
+- ShopZonee: Full stack e-commerce website.
+- Face Expression Recognition System: ML-based facial expression recognition.
+- Gemini Clone: AI chatbot interface.
+- Mega Blog Platform: Dynamic blogging platform.
+- Newspaper Website: API-powered news website.
+- Agency Website: Client-focused services website.
+
+Skills
+Python, Java Beginner, HTML, CSS, JavaScript, Full Stack Development, WordPress, Shopify, Git, GitHub, VS Code, Figma, Canva, UI/UX Design, Machine Learning Basics, API Integration.
