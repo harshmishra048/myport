@@ -1,16 +1,18 @@
 export const profile = {
-  name: 'Harsh Mishra',
-  role: 'Full Stack Developer & Machine Learning Enthusiast',
-  email: 'mishraharsh4353@gmail.com',
-  phone: '+91 8109350879',
-  linkedin: 'https://linkedin.com/in/mishraharsh4353',
-  github: 'https://github.com/harshmishra048',
-  resume: '/Harsh_Mishra_Resume.txt',
+  name: "Harsh Mishra",
+  role: "Full Stack Developer & Machine Learning Enthusiast",
+  email: "mishraharsh4353@gmail.com",
+  phone: "+91 8109350879",
+  linkedin: "https://linkedin.com/in/mishraharsh4353",
+  github: "https://github.com/harshmishra048",
+  resume: "/Harsh_Mishra_Resume.txt",
   images: {
-    portrait: '', // Add your profile image link or /images/profile.jpg
+    hero: "", // Optional bigger top hero image. If empty, portrait is used.
+    portrait:
+      "https://res.cloudinary.com/davsexxnb/image/upload/q_auto/f_auto/v1781596977/WhatsApp_Image_2026-06-16_at_1.27.54_PM_h56vnc.jpg", // Add your profile image link or /images/profile.jpg
   },
   tagline:
-    'I create scalable web apps, AI-powered solutions, and beautiful digital experiences that solve real-world problems.',
+    "I create scalable web apps, AI-powered solutions, and beautiful digital experiences that solve real-world problems.",
 };
 
 export const navItems = [

@@ -1,7 +1,7 @@
 import { Suspense, useMemo, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Float, Html, Line, Sparkles as ThreeSparkles, Stars } from '@react-three/drei';
-import { ArrowDownRight, Download, Github, Linkedin, Mail, Sparkles } from 'lucide-react';
+import { ArrowDownRight, Code2, Cpu, Download, Github, Linkedin, Mail, Palette, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import MagneticButton from './MagneticButton.jsx';
 import { profile } from '../data/portfolio.js';
@@ -172,6 +172,8 @@ function DeveloperScene() {
 }
 
 export default function Hero3D() {
+  const heroImage = profile.images.hero || profile.images.portrait;
+
   return (
     <section id="home" className="hero-section">
       <div className="hero-canvas" aria-hidden="true">
@@ -227,13 +229,46 @@ export default function Hero3D() {
         </MotionDiv>
 
         <MotionDiv
-          className="hero-signal"
-          initial={{ opacity: 0, x: 24 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.9, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+          className="hero-visual-column"
+          initial={{ opacity: 0, x: 34, filter: 'blur(10px)' }}
+          animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
+          transition={{ duration: 0.95, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
         >
-          <span className="hero-signal__status" />
-          <p>Available for internships, freelance builds, and product-focused engineering work.</p>
+          <div className="hero-image-card">
+            <div className="hero-image-card__glow" />
+            <div className="hero-image-card__frame">
+              {heroImage ? (
+                <img src={heroImage} alt="Harsh Mishra" />
+              ) : (
+                <div className="hero-image-card__fallback">
+                  <span>HM</span>
+                </div>
+              )}
+            </div>
+            <div className="hero-image-card__identity">
+              <span>Harsh Mishra</span>
+              <strong>Creative Developer</strong>
+            </div>
+            <div className="hero-image-card__chips" aria-hidden="true">
+              <span>
+                <Code2 size={15} />
+                Full Stack
+              </span>
+              <span>
+                <Cpu size={15} />
+                AI / ML
+              </span>
+              <span>
+                <Palette size={15} />
+                UI/UX
+              </span>
+            </div>
+          </div>
+
+          <div className="hero-signal">
+            <span className="hero-signal__status" />
+            <p>Available for internships, freelance builds, and product-focused engineering work.</p>
+          </div>
         </MotionDiv>
       </div>
     </section>

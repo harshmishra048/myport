@@ -109,6 +109,7 @@ image: '/images/project-preview.png'
 
 Image fields are available in `src/data/portfolio.js`:
 
+- `profile.images.hero`
 - `profile.images.portrait`
 - `skillImages`
 - each item in `projects[].image`
