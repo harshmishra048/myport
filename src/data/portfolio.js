@@ -6,6 +6,9 @@ export const profile = {
   linkedin: 'https://linkedin.com/in/mishraharsh4353',
   github: 'https://github.com/harshmishra048',
   resume: '/Harsh_Mishra_Resume.txt',
+  images: {
+    portrait: '', // Add your profile image link or /images/profile.jpg
+  },
   tagline:
     'I create scalable web apps, AI-powered solutions, and beautiful digital experiences that solve real-world problems.',
 };
@@ -61,11 +64,31 @@ export const skillGroups = [
   },
 ];
 
+export const skillImages = {
+  Python: '', // Add skill logo/image link
+  'Java Beginner': '',
+  HTML: '',
+  CSS: '',
+  JavaScript: '',
+  'Full Stack Development': '',
+  WordPress: '',
+  Shopify: '',
+  Git: '',
+  GitHub: '',
+  'VS Code': '',
+  Figma: '',
+  Canva: '',
+  'UI/UX Design': '',
+  'Machine Learning Basics': '',
+  'API Integration': '',
+};
+
 export const orbitSkills = skillGroups.flatMap((group) =>
   group.skills.map((skill) => ({
     name: skill,
     category: group.category,
     accent: group.accent,
+    image: skillImages[skill],
   })),
 );
 
@@ -78,6 +101,7 @@ export const projects = [
     description:
       'A full-stack event and wedding management platform that enables seamless planning through dynamic service listings, user authentication, and intuitive engagement flows.',
     accent: 'cyan',
+    image: '', // Add project screenshot/mockup/reference image link
   },
   {
     title: 'SURI',
@@ -87,6 +111,7 @@ export const projects = [
     description:
       'An inclusive communication platform designed to bridge the gap for deaf and mute individuals, with special attention to rural usability and non-technical users.',
     accent: 'emerald',
+    image: '',
   },
   {
     title: 'ShopZonee',
@@ -96,6 +121,7 @@ export const projects = [
     description:
       'A complete e-commerce platform with product management, cart system, user authentication, product listings, and a responsive checkout workflow.',
     accent: 'violet',
+    image: '',
   },
   {
     title: 'Face Expression Recognition',
@@ -105,6 +131,7 @@ export const projects = [
     description:
       'A machine learning-based facial expression recognition system using Python libraries and computer vision techniques to classify human emotions in real time.',
     accent: 'blue',
+    image: '',
   },
   {
     title: 'Gemini Clone',
@@ -114,6 +141,7 @@ export const projects = [
     description:
       'A conversational AI chatbot interface with real-time response capability, clean UI/UX, and core assistant features focused on interactive usability.',
     accent: 'cyan',
+    image: '',
   },
   {
     title: 'Mega Blog Platform',
@@ -123,6 +151,7 @@ export const projects = [
     description:
       'A dynamic blogging platform with structured content management patterns and a readable interface built for long-form publishing.',
     accent: 'violet',
+    image: '',
   },
   {
     title: 'Newspaper Website',
@@ -132,6 +161,7 @@ export const projects = [
     description:
       'A responsive modern newspaper website integrated with external APIs to fetch real-time news and present it in a polished editorial layout.',
     accent: 'emerald',
+    image: '',
   },
   {
     title: 'Agency Website',
@@ -141,6 +171,7 @@ export const projects = [
     description:
       'A professional agency website showcasing services with a clean, client-focused UI design and conversion-minded visual hierarchy.',
     accent: 'blue',
+    image: '',
   },
 ];
 
@@ -169,22 +200,34 @@ export const education = {
 };
 
 export const certifications = [
-  'Python & DSA Course - Udemy, Hitesh Choudhary',
-  'Full Stack Web Development Certification - University',
-  'Microsoft Certification Program - Mentor at University Level',
+  {
+    title: 'Python & DSA Course - Udemy, Hitesh Choudhary',
+    image: '', // Add certificate screenshot/logo/reference image link
+  },
+  {
+    title: 'Full Stack Web Development Certification - University',
+    image: '',
+  },
+  {
+    title: 'Microsoft Certification Program - Mentor at University Level',
+    image: '',
+  },
 ];
 
 export const achievements = [
   {
     title: '4th Rank',
     detail: 'National Conference Poster Presentation',
+    image: '', // Add trophy/event/poster/reference image link
   },
   {
     title: 'Research Paper Published',
     detail: 'Published in IJAI RRE',
+    image: '',
   },
   {
     title: 'Smart India Hackathon',
     detail: 'Participant - SIH',
+    image: '',
   },
 ];

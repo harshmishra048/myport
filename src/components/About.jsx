@@ -1,7 +1,7 @@
 import { Cpu, Fingerprint, Layers3, Sparkles } from 'lucide-react';
 import Reveal from './Reveal.jsx';
 import SectionHeader from './SectionHeader.jsx';
-import { stats } from '../data/portfolio.js';
+import { profile, stats } from '../data/portfolio.js';
 
 const identity = [
   'Full-stack application thinking',
@@ -24,7 +24,11 @@ export default function About() {
           <Reveal className="hologram-card">
             <div className="hologram-card__scan" />
             <div className="identity-mark">
-              <Fingerprint size={42} />
+              {profile.images.portrait ? (
+                <img src={profile.images.portrait} alt="Harsh Mishra portrait" loading="lazy" />
+              ) : (
+                <Fingerprint size={42} />
+              )}
             </div>
             <div>
               <span className="card-label">Identity</span>

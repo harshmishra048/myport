@@ -37,6 +37,15 @@ export default function ProjectCard({ project, icon: Icon, index }) {
       transition={{ duration: 0.75, delay: index * 0.04, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="project-card__shine" />
+      <div className="project-card__media">
+        {project.image ? (
+          <img src={project.image} alt={`${project.title} project preview`} loading="lazy" />
+        ) : (
+          <span className="project-card__media-icon">
+            <ProjectIcon size={38} />
+          </span>
+        )}
+      </div>
       <div className="project-card__top">
         <span className="project-card__icon">
           <ProjectIcon size={24} />

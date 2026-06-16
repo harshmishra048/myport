@@ -91,6 +91,30 @@ Most portfolio content lives in `src/data/portfolio.js`. Update that file to cha
 
 The downloadable resume placeholder is available at `public/Harsh_Mishra_Resume.txt`.
 
+## Image Customization
+
+You can use remote image URLs or local images from `public/images`.
+
+For local images, place files in:
+
+```txt
+public/images/
+```
+
+Then reference them like this:
+
+```js
+image: '/images/project-preview.png'
+```
+
+Image fields are available in `src/data/portfolio.js`:
+
+- `profile.images.portrait`
+- `skillImages`
+- each item in `projects[].image`
+- each item in `certifications[].image`
+- each item in `achievements[].image`
+
 ## Deployment
 
 This project can be deployed on Vercel, Netlify, GitHub Pages, or any static hosting provider that supports Vite builds. Use:

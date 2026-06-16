@@ -625,6 +625,7 @@ svg {
 
 .identity-mark {
   display: grid;
+  overflow: hidden;
   width: 86px;
   height: 86px;
   place-items: center;
@@ -633,6 +634,12 @@ svg {
   background: radial-gradient(circle, rgba(34, 211, 238, 0.22), rgba(139, 92, 246, 0.1));
   color: var(--cyan);
   box-shadow: var(--shadow-cyan);
+}
+
+.identity-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hologram-card h3,
@@ -660,6 +667,9 @@ svg {
 .identity-list span,
 .skill-group__chips span,
 .project-card__stack span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 999px;
   padding: 0.48rem 0.68rem;
@@ -667,6 +677,16 @@ svg {
   color: var(--soft);
   font-size: 0.82rem;
   font-weight: 700;
+}
+
+.skill-group__chips img,
+.orbit-chip img {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 14px rgba(34, 211, 238, 0.22);
 }
 
 .about-copy {
@@ -804,6 +824,10 @@ svg {
   top: 50%;
   left: 50%;
   z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.42rem;
   width: max-content;
   max-width: 180px;
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -905,7 +929,7 @@ svg {
   --mx: 50%;
   --my: 50%;
   display: flex;
-  min-height: 430px;
+  min-height: 510px;
   overflow: hidden;
   flex-direction: column;
   padding: 1rem;
@@ -944,6 +968,54 @@ svg {
   opacity: 1;
 }
 
+.project-card__media {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  height: clamp(132px, 13vw, 178px);
+  overflow: hidden;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 30% 20%, rgba(34, 211, 238, 0.2), transparent 42%),
+    radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.18), transparent 38%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.035));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.project-card__media::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 45%, rgba(3, 7, 18, 0.72));
+  content: '';
+  pointer-events: none;
+}
+
+.project-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 300ms ease, filter 300ms ease;
+}
+
+.project-card:hover .project-card__media img {
+  filter: saturate(1.08) contrast(1.05);
+  transform: scale(1.055);
+}
+
+.project-card__media-icon {
+  display: grid;
+  width: 76px;
+  height: 76px;
+  place-items: center;
+  border: 1px solid rgba(34, 211, 238, 0.28);
+  border-radius: var(--radius);
+  background: rgba(34, 211, 238, 0.08);
+  color: var(--cyan);
+  box-shadow: var(--shadow-cyan);
+}
+
 .project-card__top,
 .project-card__actions {
   position: relative;
@@ -952,6 +1024,10 @@ svg {
   align-items: center;
   justify-content: space-between;
   gap: 0.7rem;
+}
+
+.project-card__top {
+  margin-top: 0.9rem;
 }
 
 .project-card__icon {
@@ -1177,10 +1253,49 @@ svg {
   transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
 }
 
-.certificate-card svg,
+.certificate-card__visual svg,
 .achievement-card__icon {
   color: var(--cyan);
   filter: drop-shadow(0 0 20px rgba(34, 211, 238, 0.35));
+}
+
+.certificate-card__visual,
+.achievement-card__visual {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 112px;
+  overflow: hidden;
+  place-items: center;
+  border: 1px solid rgba(34, 211, 238, 0.18);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 24% 20%, rgba(34, 211, 238, 0.16), transparent 42%),
+    radial-gradient(circle at 76% 70%, rgba(139, 92, 246, 0.16), transparent 40%),
+    rgba(255, 255, 255, 0.045);
+}
+
+.certificate-card__visual::after,
+.achievement-card__visual::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 45%, rgba(3, 7, 18, 0.72));
+  content: '';
+  pointer-events: none;
+}
+
+.certificate-card__visual img,
+.achievement-card__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 300ms ease, filter 300ms ease;
+}
+
+.certificate-card:hover .certificate-card__visual img,
+.achievement-card:hover .achievement-card__visual img {
+  filter: saturate(1.08) contrast(1.05);
+  transform: scale(1.055);
 }
 
 .certificate-card span {

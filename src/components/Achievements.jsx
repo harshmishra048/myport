@@ -21,9 +21,15 @@ export default function Achievements() {
 
             return (
               <Reveal key={achievement.title} className="achievement-card" delay={index * 0.08}>
-                <span className="achievement-card__icon">
-                  <Icon size={32} />
-                </span>
+                <div className="achievement-card__visual">
+                  {achievement.image ? (
+                    <img src={achievement.image} alt={`${achievement.title} achievement`} loading="lazy" />
+                  ) : (
+                    <span className="achievement-card__icon">
+                      <Icon size={32} />
+                    </span>
+                  )}
+                </div>
                 <h3>{achievement.title}</h3>
                 <p>{achievement.detail}</p>
               </Reveal>

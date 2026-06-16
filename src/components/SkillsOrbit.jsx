@@ -1,7 +1,7 @@
 import { Binary, Braces, Code2, Figma, GitBranch, Orbit } from 'lucide-react';
 import Reveal from './Reveal.jsx';
 import SectionHeader from './SectionHeader.jsx';
-import { orbitSkills, skillGroups } from '../data/portfolio.js';
+import { orbitSkills, skillGroups, skillImages } from '../data/portfolio.js';
 
 const icons = {
   Programming: Binary,
@@ -68,6 +68,7 @@ export default function SkillsOrbit() {
                 className={`orbit-chip orbit-chip--${skill.accent}`}
                 style={getOrbitStyle(index)}
               >
+                {skill.image ? <img src={skill.image} alt="" loading="lazy" /> : null}
                 {skill.name}
               </span>
             ))}
@@ -85,7 +86,10 @@ export default function SkillsOrbit() {
                   </div>
                   <div className="skill-group__chips">
                     {group.skills.map((skill) => (
-                      <span key={skill}>{skill}</span>
+                      <span key={skill}>
+                        {skillImages[skill] ? <img src={skillImages[skill]} alt="" loading="lazy" /> : null}
+                        {skill}
+                      </span>
                     ))}
                   </div>
                 </Reveal>

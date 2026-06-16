@@ -20,10 +20,16 @@ export default function Certifications() {
             const Icon = icons[index];
 
             return (
-              <Reveal key={certification} className="certificate-card" delay={index * 0.08}>
-                <Icon size={28} />
+              <Reveal key={certification.title} className="certificate-card" delay={index * 0.08}>
+                <div className="certificate-card__visual">
+                  {certification.image ? (
+                    <img src={certification.image} alt={`${certification.title} certificate`} loading="lazy" />
+                  ) : (
+                    <Icon size={28} />
+                  )}
+                </div>
                 <span>Certificate</span>
-                <h3>{certification}</h3>
+                <h3>{certification.title}</h3>
               </Reveal>
             );
           })}
